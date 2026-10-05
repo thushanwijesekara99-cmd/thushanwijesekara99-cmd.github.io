@@ -383,6 +383,63 @@
   .cred-name{ font-weight:700; font-size:15px; margin-bottom:4px; color:var(--blue-deeper);}
   .cred-org{ font-size:13px; color:var(--ink-soft); }
 
+  /* ---------- PROJECTS (drawing sheets) ---------- */
+  .proj-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
+    gap:22px;
+  }
+  .proj-card{
+    border:1px solid var(--line);
+    background:var(--paper);
+    display:flex;
+    flex-direction:column;
+  }
+  .proj-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding:10px 16px;
+    border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .proj-tag{
+    border:1.5px solid var(--amber);
+    color:var(--amber);
+    padding:2px 7px;
+    font-weight:600;
+  }
+  .proj-body{ padding:18px 16px 16px; flex:1; display:flex; flex-direction:column; }
+  .proj-name{ font-size:19px; font-weight:800; color:var(--blue-deeper); margin:0 0 4px; }
+  .proj-sub{ font-size:13px; font-weight:600; color:var(--blue); margin-bottom:10px; }
+  .proj-desc{ font-size:14px; line-height:1.55; color:var(--ink); margin:0 0 14px; }
+  .proj-stack{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+  .proj-stack span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    padding:3px 8px;
+    background:var(--paper-2);
+    color:var(--ink);
+  }
+  .proj-link{
+    margin-top:auto;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--blue);
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .proj-link:hover{ color:var(--blue-deeper); }
+  .proj-link.muted{ color:var(--ink-soft); text-decoration:none; }
+
   /* ---------- ACHIEVEMENTS (annotated callouts) ---------- */
   .callout{
     display:grid;
@@ -637,10 +694,55 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">Drawing Register — Projects</span>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="proj-grid">
+
+      <article class="proj-card">
+        <div class="proj-top"><span>DWG P-01</span><span class="proj-tag">Stage 1</span></div>
+        <div class="proj-body">
+          <h3 class="proj-name">OfficeFlow</h3>
+          <div class="proj-sub">Offline document circulation system</div>
+          <p class="proj-desc">Replaces paper approvals for a two-company construction group. Every advance, increment, leave request and LPO is scanned, numbered, routed and tracked from upload to completion, with PDF stamps, signatures and a full audit trail. Runs on the office LAN with no internet.</p>
+          <div class="proj-stack"><span>Node.js</span><span>SQLite</span><span>PDF.js</span><span>pdf-lib</span></div>
+          <span class="proj-link muted">Private repository · demo on request</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-top"><span>DWG P-02</span><span class="proj-tag">In development</span></div>
+        <div class="proj-body">
+          <h3 class="proj-name">Dirhamly</h3>
+          <div class="proj-sub">Salary-planning app for UAE workers</div>
+          <p class="proj-desc">Answers one question every day: how much can I safely spend today? Built on pay cycles, not months. Eight languages including Arabic and Urdu right-to-left, fully offline, no account or bank login.</p>
+          <div class="proj-stack"><span>Flutter</span><span>Dart</span><span>8 languages</span><span>Offline-first</span></div>
+          <a class="proj-link" href="https://github.com/thushanwijesekara99-cmd/dirhamly" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-top"><span>DWG P-03</span><span class="proj-tag">Design &amp; planning</span></div>
+        <div class="proj-body">
+          <h3 class="proj-name">TopPlate AI</h3>
+          <div class="proj-sub">AI dish-discovery platform for Dubai</div>
+          <p class="proj-desc">Ranks individual dishes, not just restaurants. An AI assistant recommends plates by budget, area and diet using only real data. Includes the full 7-phase SDLC plan, requirements, architecture and a 24-week MVP roadmap.</p>
+          <div class="proj-stack"><span>SDLC</span><span>Requirements</span><span>Claude API</span><span>PostgreSQL</span></div>
+          <a class="proj-link" href="https://github.com/thushanwijesekara99-cmd/topplate-ai" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
   <!-- SKILLS LEGEND -->
   <section class="section" id="skills">
     <div class="sec-head">
-      <span class="sec-num">03</span>
+      <span class="sec-num">04</span>
       <span class="sec-title">Legend — Core Skills</span>
       <span class="sec-rule"></span>
     </div>
@@ -663,7 +765,7 @@
   <!-- EDUCATION & CERTIFICATIONS -->
   <section class="section" id="education">
     <div class="sec-head">
-      <span class="sec-num">04</span>
+      <span class="sec-num">05</span>
       <span class="sec-title">Education &amp; Certifications</span>
       <span class="sec-rule"></span>
     </div>
@@ -689,7 +791,7 @@
   <!-- KEY ACHIEVEMENTS -->
   <section class="section dark grid-bg-dark" id="achievements">
     <div class="sec-head">
-      <span class="sec-num">05</span>
+      <span class="sec-num">06</span>
       <span class="sec-title" style="color:var(--paper)">Annotations — Key Achievements</span>
       <span class="sec-rule"></span>
     </div>
@@ -710,7 +812,7 @@
   <!-- CONTACT / TRANSMITTAL -->
   <section class="section" id="contact">
     <div class="sec-head">
-      <span class="sec-num">06</span>
+      <span class="sec-num">07</span>
       <span class="sec-title">Transmittal — Get in Touch</span>
       <span class="sec-rule"></span>
     </div>
